@@ -47,7 +47,7 @@ namespace Sitecore.Support.XA.Feature.Redirects.Pipelines.HttpRequestBegin
       {
         if (linkField.IsInternal && linkField.TargetItem != null)
         {
-          SiteInfo site = ServiceLocator.ServiceProvider.GetService<ISiteInfoResolver>().GetSiteInfo(linkField.TargetItem);
+         SiteInfo site = ServiceLocator.ServiceProvider.GetService<ISiteInfoResolver>().GetSiteInfo(linkField.TargetItem);
           UrlOptions options = UrlOptions.DefaultOptions;
           options.Site = SiteContextFactory.GetSiteContext(site.Name);
           options.AlwaysIncludeServerUrl = true;
